@@ -1,44 +1,60 @@
 {
-    "name": "code0411",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "eslint --fix && next build",
-        "start": "next start",
-        "lint": "eslint --fix",
-        "format": "prettier --write ."
-    },
-    "dependencies": {
-        "@fortawesome/fontawesome-svg-core": "7.1.0",
-        "@fortawesome/free-regular-svg-icons": "7.1.0",
-        "@fortawesome/free-solid-svg-icons": "7.1.0",
-        "@fortawesome/react-fontawesome": "3.1.1",
-        "axios": "1.13.2",
-        "disable-devtool": "0.3.9",
-        "intl-tel-input": "25.13.2",
-        "next": "16.0.10",
-        "react": "19.2.3",
-        "react-dom": "19.2.3",
-        "zustand": "5.0.9"
-    },
-    "devDependencies": {
-        "@tailwindcss/postcss": "4.1.18",
-        "@types/node": "25.0.2",
-        "@types/react": "19.2.7",
-        "@types/react-dom": "19.2.3",
-        "babel-plugin-react-compiler": "1.0.0",
-        "baseline-browser-mapping": "2.11.19",
-        "eslint": "9.39.2",
-        "eslint-config-next": "16.0.10",
-        "prettier": "3.7.4",
-        "prettier-plugin-organize-imports": "4.3.0",
-        "prettier-plugin-tailwindcss": "0.7.2",
-        "tailwindcss": "4.1.18",
-        "typescript": "5.9.3"
-    },
-    "allowScripts": {
-        "sharp@0.34.5": true,
-        "unrs-resolver@1.12.2": true
-    }
+  "name": "code0411",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "eslint --fix && next build",
+    "start": "next start",
+    "lint": "eslint --fix",
+    "format": "prettier --write .",
+    "dev:vinext": "vinext dev --port 3001",
+    "build:vinext": "vinext build",
+    "start:vinext": "wrangler dev --config dist/server/wrangler.json",
+    "deploy:vinext": "vinext-cloudflare deploy --config dist/server/wrangler.json"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "7.1.0",
+    "@fortawesome/free-regular-svg-icons": "7.1.0",
+    "@fortawesome/free-solid-svg-icons": "7.1.0",
+    "@fortawesome/react-fontawesome": "3.1.1",
+    "@vinext/cloudflare": "1.0.0-beta.6",
+    "axios": "1.13.2",
+    "disable-devtool": "0.3.9",
+    "intl-tel-input": "25.13.2",
+    "next": "16.0.10",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-server-dom-webpack": "19.2.8",
+    "vinext": "1.0.0-beta.8",
+    "zustand": "5.0.9"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.53.1",
+    "@tailwindcss/postcss": "4.1.18",
+    "@types/node": "25.0.2",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.1.0",
+    "@vitejs/plugin-rsc": "0.5.34",
+    "babel-plugin-react-compiler": "1.0.0",
+    "baseline-browser-mapping": "2.11.19",
+    "eslint": "9.39.2",
+    "eslint-config-next": "16.0.10",
+    "prettier": "3.7.4",
+    "prettier-plugin-organize-imports": "4.3.0",
+    "prettier-plugin-tailwindcss": "0.7.2",
+    "tailwindcss": "4.1.18",
+    "typescript": "5.9.3",
+    "vite": "8.2.2",
+    "wrangler": "4.125.0"
+  },
+  "type": "module",
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "sharp@0.34.5": true,
+    "sharp@0.35.2": true,
+    "unrs-resolver@1.12.2": true,
+    "workerd@1.20260820.1": true
+  }
 }
