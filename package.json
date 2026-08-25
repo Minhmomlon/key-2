@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "eslint --fix && next build",
+    "build": "eslint --fix && vinext build",
     "start": "next start",
     "lint": "eslint --fix",
     "format": "prettier --write .",
     "dev:vinext": "vinext dev --port 3001",
     "build:vinext": "vinext build",
     "start:vinext": "wrangler dev --config dist/server/wrangler.json",
-    "deploy:vinext": "vinext-cloudflare deploy --config dist/server/wrangler.json"
+    "deploy:vinext": "vinext-cloudflare deploy --config dist/server/wrangler.json",
+    "deploy": "vinext-cloudflare deploy --config dist/server/wrangler.json"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "7.1.0",
