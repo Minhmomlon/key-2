@@ -48,7 +48,8 @@ const VerifyModal: FC<{ nextStep: () => void }> = ({ nextStep }) => {
             }, 1000);
             return () => clearTimeout(timer);
         } else if (countdown === 0 && showError) {
-            setShowError(false);
+            const t = setTimeout(() => setShowError(false), 0);
+            return () => clearTimeout(t);
         }
     }, [countdown, showError]);
 
